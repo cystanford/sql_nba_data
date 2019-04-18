@@ -1,3 +1,38 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : localhost_3306
+ Source Server Type    : MySQL
+ Source Server Version : 80013
+ Source Host           : localhost:3306
+ Source Schema         : wucai
+
+ Target Server Type    : MySQL
+ Target Server Version : 80013
+ File Encoding         : 65001
+
+ Date: 18/04/2019 14:14:56
+*/
+
+SET NAMES utf8mb4;
+SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for player
+-- ----------------------------
+DROP TABLE IF EXISTS `player`;
+CREATE TABLE `player`  (
+  `player_id` int(11) NOT NULL AUTO_INCREMENT,
+  `team_id` int(11) NOT NULL,
+  `player_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `height` float(3, 2) NULL DEFAULT NULL,
+  PRIMARY KEY (`player_id`) USING BTREE,
+  UNIQUE INDEX `player_name`(`player_name`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 10038 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of player
+-- ----------------------------
 INSERT INTO `player` VALUES (10001, 1001, '韦恩-艾灵顿', 1.93);
 INSERT INTO `player` VALUES (10002, 1001, '雷吉-杰克逊', 1.91);
 INSERT INTO `player` VALUES (10003, 1001, '安德烈-德拉蒙德', 2.11);
@@ -35,3 +70,5 @@ INSERT INTO `player` VALUES (10034, 1002, '埃德蒙-萨姆纳', 1.96);
 INSERT INTO `player` VALUES (10035, 1002, '达文-里德', 1.98);
 INSERT INTO `player` VALUES (10036, 1002, '阿利兹-约翰逊', 2.06);
 INSERT INTO `player` VALUES (10037, 1002, 'Ike Anigbogu', 2.08);
+
+SET FOREIGN_KEY_CHECKS = 1;
