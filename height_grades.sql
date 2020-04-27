@@ -11,7 +11,7 @@
  Target Server Version : 80013
  File Encoding         : 65001
 
- Date: 18/04/2019 14:14:42
+ Date: 27/04/2020 20:04:44
 */
 
 SET NAMES utf8mb4;
@@ -22,9 +22,9 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 DROP TABLE IF EXISTS `height_grades`;
 CREATE TABLE `height_grades`  (
-  `height_level` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `height_lowest` float(3, 2) NOT NULL,
-  `height_highest` float(3, 2) NOT NULL
+  `height_level` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '身高等级',
+  `height_lowest` float(3, 2) NOT NULL COMMENT '该等级范围中的最低身高',
+  `height_highest` float(3, 2) NOT NULL COMMENT '该等级范围中的最高身高'
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------

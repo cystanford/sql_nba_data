@@ -11,7 +11,7 @@
  Target Server Version : 80013
  File Encoding         : 65001
 
- Date: 03/07/2019 17:13:54
+ Date: 27/04/2020 19:56:03
 */
 
 SET NAMES utf8mb4;
@@ -22,13 +22,13 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 DROP TABLE IF EXISTS `player`;
 CREATE TABLE `player`  (
-  `player_id` int(11) NOT NULL AUTO_INCREMENT,
-  `team_id` int(11) NOT NULL,
-  `player_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `height` float(3, 2) NULL DEFAULT 0.00,
+  `player_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '球员ID',
+  `team_id` int(11) NOT NULL COMMENT '球队ID',
+  `player_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '球员姓名',
+  `height` float(3, 2) NULL DEFAULT NULL COMMENT '球员身高',
   PRIMARY KEY (`player_id`) USING BTREE,
   UNIQUE INDEX `player_name`(`player_name`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 10038 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of player

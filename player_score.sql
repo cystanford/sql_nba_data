@@ -11,7 +11,7 @@
  Target Server Version : 80013
  File Encoding         : 65001
 
- Date: 25/06/2019 23:46:41
+ Date: 27/04/2020 20:01:39
 */
 
 SET NAMES utf8mb4;
@@ -22,25 +22,25 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 DROP TABLE IF EXISTS `player_score`;
 CREATE TABLE `player_score`  (
-  `game_id` int(11) NOT NULL,
-  `player_id` int(11) NOT NULL,
-  `is_first` tinyint(1) NOT NULL,
-  `playing_time` int(11) NOT NULL,
-  `rebound` int(11) NOT NULL,
-  `rebound_o` int(11) NOT NULL,
-  `rebound_d` int(11) NOT NULL,
-  `assist` int(11) NOT NULL,
-  `score` int(11) NOT NULL,
-  `steal` int(11) NOT NULL,
-  `blockshot` int(11) NOT NULL,
-  `fault` int(11) NOT NULL,
-  `foul` int(11) NOT NULL,
-  `shoot_attempts` int(11) NOT NULL,
-  `shoot_hits` int(11) NOT NULL,
-  `shoot_3_attempts` int(11) NOT NULL,
-  `shoot_3_hits` int(11) NOT NULL,
-  `shoot_p_attempts` int(11) NOT NULL,
-  `shoot_p_hits` int(11) NOT NULL
+  `game_id` int(11) NOT NULL COMMENT '比赛ID',
+  `player_id` int(11) NOT NULL COMMENT '球员ID',
+  `is_first` tinyint(1) NOT NULL COMMENT '是否首发',
+  `playing_time` int(11) NOT NULL COMMENT '该球员本次比赛出场时间',
+  `rebound` int(11) NOT NULL COMMENT '篮板球',
+  `rebound_o` int(11) NOT NULL COMMENT '前场篮板',
+  `rebound_d` int(11) NOT NULL COMMENT '后场篮板',
+  `assist` int(11) NOT NULL COMMENT '助攻',
+  `score` int(11) NOT NULL COMMENT '比分',
+  `steal` int(11) NOT NULL COMMENT '抢断',
+  `blockshot` int(11) NOT NULL COMMENT '盖帽',
+  `fault` int(11) NOT NULL COMMENT '失误',
+  `foul` int(11) NOT NULL COMMENT '犯规',
+  `shoot_attempts` int(11) NOT NULL COMMENT '总出手',
+  `shoot_hits` int(11) NOT NULL COMMENT '命中',
+  `shoot_3_attempts` int(11) NOT NULL COMMENT '3分出手',
+  `shoot_3_hits` int(11) NOT NULL COMMENT '3分命中',
+  `shoot_p_attempts` int(11) NOT NULL COMMENT '罚球出手',
+  `shoot_p_hits` int(11) NOT NULL COMMENT '罚球命中'
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------

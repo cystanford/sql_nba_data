@@ -11,7 +11,7 @@
  Target Server Version : 80013
  File Encoding         : 65001
 
- Date: 25/06/2019 23:46:15
+ Date: 27/04/2020 20:03:42
 */
 
 SET NAMES utf8mb4;
@@ -22,12 +22,12 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 DROP TABLE IF EXISTS `team_score`;
 CREATE TABLE `team_score`  (
-  `game_id` int(11) NOT NULL,
-  `h_team_id` int(11) NOT NULL,
-  `v_team_id` int(11) NOT NULL,
-  `h_team_score` int(11) NOT NULL,
-  `v_team_score` int(11) NOT NULL,
-  `game_date` date NULL DEFAULT NULL,
+  `game_id` int(11) NOT NULL COMMENT '比赛ID',
+  `h_team_id` int(11) NOT NULL COMMENT '主队ID',
+  `v_team_id` int(11) NOT NULL COMMENT '客队ID',
+  `h_team_score` int(11) NOT NULL COMMENT '主队得分',
+  `v_team_score` int(11) NOT NULL COMMENT '客队得分',
+  `game_date` date NULL DEFAULT NULL COMMENT '比赛时间',
   PRIMARY KEY (`game_id`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
